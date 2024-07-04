@@ -1,4 +1,5 @@
 import { Component, FormEvent } from 'react';
+import { ButtonWithError } from './ButtonWithError.tsx';
 
 type SearchState = {
   searchValue: string;
@@ -32,6 +33,7 @@ class Search extends Component<SearchProps, SearchState> {
   render() {
     return (
       <div className="search-wrapper">
+        <ButtonWithError />
         <input
           type="text"
           className="search-input"

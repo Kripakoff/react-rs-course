@@ -41,7 +41,7 @@ class MainPage extends Component<MainProps, MainState> {
             <div className="character-item" key={item.id}>
               {item.name}
               <div className="character-image">
-                <img src={item.image} />
+                <img src={item.image} alt={'character image' + item.name} />
               </div>
               <div>Location: {item.location.name}</div>
               <div>Species: {item.species}</div>
