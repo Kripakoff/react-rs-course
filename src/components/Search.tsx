@@ -19,7 +19,7 @@ class Search extends Component<SearchProps, SearchState> {
   }
 
   inputHandler(e: FormEvent<HTMLInputElement>) {
-    const searchValue = (e.currentTarget as HTMLInputElement).value;
+    const searchValue = e.currentTarget.value;
     this.setState({ searchValue });
   }
 
