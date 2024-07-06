@@ -3,9 +3,10 @@ const headers = {
 };
 
 const baseUrl = 'https://rickandmortyapi.com/api/character';
-export const fetchCharacters = async () => {
+export const fetchCharacters = async (search: string | null) => {
+  const url = search ? baseUrl + '/' + '?name=' + search.trim() : baseUrl;
   try {
-    const response = await fetch(baseUrl, {
+    const response = await fetch(url, {
       headers: headers,
       method: 'GET',
     });
